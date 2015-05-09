@@ -16,7 +16,7 @@ function sortByName() {
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
   var sheet = spreadsheet.getActiveSheet();
 
-  var rangeOfRowOne = sheet.getRange(1, 1);
+  var rangeOfRowOne = sheet.getRange(1,1);
   var valueOfRowOne = rangeOfRowOne.getValue();
 
   if(valueOfRowOne == "Name"){
