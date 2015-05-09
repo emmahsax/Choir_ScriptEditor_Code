@@ -14,7 +14,7 @@ function onOpen() {
  */
 function sortByName() {
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var sheet = spreadsheet.getActiveSheet();
 
   var rangeOfRowOne = sheet.getRange(1, 1);
   var valueOfRowOne = rangeOfRowOne.getValue();
@@ -36,7 +36,7 @@ function sortByName() {
  */
 function deleteEmptyRows(){
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var sheet = spreadsheet.getActiveSheet();
   var rows = sheet.getDataRange();
   var numRows = rows.getNumRows();
   var values = rows.getValues();
@@ -60,7 +60,7 @@ function deleteEmptyRows(){
  */
 function deletePhoneNumbers(){
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var sheet = spreadsheet.getActiveSheet();
   var rows = sheet.getDataRange();
   var numRows = rows.getNumRows();
 
