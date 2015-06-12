@@ -5,7 +5,7 @@ function onOpen() {
     {name: "Delete Empty Rows", functionName: "deleteEmptyRows"},
     {name: "Delete Phone Numbers", functionName: "deletePhoneNumbers"}
   ];
-  spreadsheet.addMenu("Script Center Menu", entries);
+  spreadsheet.addMenu("Extra Features", entries);
 }
 
 
@@ -19,7 +19,7 @@ function sortByName() {
   var rangeOfRowOne = sheet.getRange(1,1);
   var valueOfRowOne = rangeOfRowOne.getValue();
 
-  if(valueOfRowOne == "Name"){
+  if(valueOfRowOne === "Name"){
     sheet.sort(1);
     spreadsheet.toast("Successfully sorted alphabetically by name.");
   } else {
@@ -44,7 +44,7 @@ function deleteEmptyRows(){
 
   for(var i = 0; i < numRows; i++){
     var currentRow = values[i];
-    if(currentRow[0] == ''){
+    if(currentRow[0] === ''){
       sheet.deleteRow((parseInt(i)+1) - numDeleted);
       numDeleted++;
     }
@@ -67,7 +67,7 @@ function deletePhoneNumbers(){
   var rangeOfRowOne = sheet.getRange(1,2);
   var valueOfRowOne = rangeOfRowOne.getValue();
 
-  if(valueOfRowOne == "Phone Number"){
+  if(valueOfRowOne === "Phone Number"){
     for(var i = 0; i < numRows; i++){
       var range = sheet.getRange("B2:B");
       range.clearContent();
