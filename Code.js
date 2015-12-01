@@ -1,3 +1,10 @@
+/* Code developed in Google Script Editor of Google Doc's Spreadsheet. This code is designed to be used
+ * on a spreadsheet that the UMM Concert Choir uses to keep track of and organize the concert dresses and
+ * tuxes.
+ *
+ * Author: Emma Sax
+ */
+
 function onOpen() {
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
   var entries = [
@@ -7,7 +14,6 @@ function onOpen() {
   ];
   spreadsheet.addMenu("Extra Features", entries);
 }
-
 
 /* This function is designed to sort the current sheet by first name iff "Name" is what
  * is in the first column of the first row.
@@ -30,7 +36,7 @@ function sortByName() {
 
 /* This function is designed to look at the current sheet, and delete all rows
  * that have the first column A empty. So for the purposes of this spreadsheet,
- * it will delete any row that does not have a name in assigned to a row.
+ * it will delete any row that does not have a name assigned to a row.
  * The code was taken from and adapted from:
  * http://stackoverflow.com/questions/11058019/delete-a-row-in-google-spreadsheets-if-value-of-cell-in-said-row-is-0-or-blank
  */
