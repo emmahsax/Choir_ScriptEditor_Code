@@ -19,20 +19,17 @@ function onOpen() {
  * is in the first column of the first row.
  */
 function sortByName() {
-  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = spreadsheet.getActiveSheet();
-
-  var rangeOfRowOne = sheet.getRange(1,1);
+  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet;
+  var rangeOfRowOne = spreadsheet.getRange(1,1);
   var valueOfRowOne = rangeOfRowOne.getValue();
 
-  if(valueOfRowOne === "Name"){
-    sheet.sort(1);
+  if (valueOfRowOne === "Name") {
+    spreadsheet.sort(1);
     spreadsheet.toast("Successfully sorted alphabetically by name.");
   } else {
     spreadsheet.toast("Did not sort alphabetically by name.");
   }
 }
-
 
 /* This function is designed to look at the current sheet, and delete all rows
  * that have the first column A empty. So for the purposes of this spreadsheet,
@@ -41,17 +38,16 @@ function sortByName() {
  * http://stackoverflow.com/questions/11058019/delete-a-row-in-google-spreadsheets-if-value-of-cell-in-said-row-is-0-or-blank
  */
 function deleteEmptyRows(){
-  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = spreadsheet.getActiveSheet();
-  var rows = sheet.getDataRange();
+  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet;
+  var rows = spreadsheet.getDataRange();
   var numRows = rows.getNumRows();
   var values = rows.getValues();
   var numDeleted = 0;
 
-  for(var i = 0; i < numRows; i++){
+  for (var i = 0; i < numRows; i++) {
     var currentRow = values[i];
-    if(currentRow[0] === ''){
-      sheet.deleteRow((parseInt(i)+1) - numDeleted);
+    if (currentRow[0] === '') {
+      spreadsheet.deleteRow((parseInt(i)+1) - numDeleted);
       numDeleted++;
     }
   }
@@ -65,17 +61,15 @@ function deleteEmptyRows(){
  * http://stackoverflow.com/questions/14109538/trying-to-read-cell-1-1-in-spreadsheet-using-google-script-api
  */
 function deletePhoneNumbers(){
-  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = spreadsheet.getActiveSheet();
-  var rows = sheet.getDataRange();
+  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet;
+  var rows = spreadsheet.getDataRange();
   var numRows = rows.getNumRows();
-
-  var rangeOfRowOne = sheet.getRange(1,2);
+  var rangeOfRowOne = spreadsheet.getRange(1,2);
   var valueOfRowOne = rangeOfRowOne.getValue();
 
-  if(valueOfRowOne === "Phone Number"){
-    for(var i = 0; i < numRows; i++){
-      var range = sheet.getRange("B2:B");
+  if (valueOfRowOne === "Phone Number") {
+    for (var i = 0; i < numRows; i++) {
+      var range = spreadsheet.getRange("B2:B");
       range.clearContent();
     }
     spreadsheet.toast("Successfully deleted all phone numbers in this sheet.");
