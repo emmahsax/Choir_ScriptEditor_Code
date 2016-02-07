@@ -25,9 +25,9 @@ function sortByName() {
 
   if (valueOfRowOne === "Name") {
     spreadsheet.sort(1);
-    spreadsheet.toast("Successfully sorted alphabetically by name.");
+    SpreadsheetApp.getActiveSpreadsheet().toast("Successfully sorted alphabetically by name.");
   } else {
-    spreadsheet.toast("Did not sort alphabetically by name.");
+    SpreadsheetApp.getActiveSpreadsheet().toast("Did not sort alphabetically by name.");
   }
 }
 
@@ -52,7 +52,7 @@ function deleteEmptyRows(){
     }
   }
 
-  spreadsheet.toast("Successfully removed " + numDeleted + " row(s).");
+  SpreadsheetApp.getActiveSpreadsheet().toast("Successfully removed " + numDeleted + " row(s).");
 }
 
 /* This function is designed to delete the data in the particular active sheet iff the second column of the first row
@@ -72,8 +72,8 @@ function deletePhoneNumbers(){
       var range = spreadsheet.getRange("B2:B");
       range.clearContent();
     }
-    spreadsheet.toast("Successfully deleted all phone numbers in this sheet.");
+    SpreadsheetApp.getActiveSpreadsheet().toast("Successfully deleted all phone numbers in this sheet.");
   } else {
-    spreadsheet.toast("Did not delete any phone numbers.");
+    SpreadsheetApp.getActiveSpreadsheet().toast("Did not delete any phone numbers.");
   }
 }
