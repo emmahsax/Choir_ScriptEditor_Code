@@ -2,15 +2,17 @@
 
 This code is designed to be part of a private Google spreadsheet to be used for UMM's Concert Choir in managing the rentals of choir dresses and tuxes.
 
-## Licensing
+---
+
+### Licensing
 
 For information on licensing, please see [LICENSE](https://github.com/emmahsax/Choir_ScriptEditor_Code/blob/main/LICENSE.md).
 
-## Code of Conduct
+### Code of Conduct
 
 When interacting with this repository, please follow [Contributor Covenant's Code of Conduct](https://contributor-covenant.org).
 
-## Archival Notice
+### Archival Notice
 
 This repository has been archived and designated as read-only. From GitHub's documentation:
 
