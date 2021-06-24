@@ -4,6 +4,14 @@ This code is designed to be part of a private Google spreadsheet to be used for 
 
 ---
 
+### Contributing
+
+To submit a feature request, bug ticket, etc, please submit an official [GitHub Issue](https://github.com/emmahsax/Choir_ScriptEditor_Code/issues/new).
+
+### Security Policy
+
+To report any security vulnerabilities, please view this repository's [Security Policy](https://github.com/emmahsax/Choir_ScriptEditor_Code/security/policy).
+
 ### Licensing
 
 For information on licensing, please see [LICENSE.md](https://github.com/emmahsax/Choir_ScriptEditor_Code/blob/main/LICENSE.md).
