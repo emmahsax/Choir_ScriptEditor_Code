@@ -6,7 +6,7 @@ This code is designed to be part of a private Google spreadsheet to be used for 
 
 ### Licensing
 
-For information on licensing, please see [LICENSE](https://github.com/emmahsax/Choir_ScriptEditor_Code/blob/main/LICENSE.md).
+For information on licensing, please see [LICENSE.md](https://github.com/emmahsax/Choir_ScriptEditor_Code/blob/main/LICENSE.md).
 
 ### Code of Conduct
 
